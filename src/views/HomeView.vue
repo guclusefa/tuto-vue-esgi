@@ -53,19 +53,19 @@ const resetForm = () => {
 
 <template>
   <div class="container mt-5">
-    <h1 class="text-center mb-4">Liste des utilisateurs</h1>
+    <h1 class="text-center mb-4">Liste des livres</h1>
 
     <form @submit.prevent="isEditing ? updateUser() : addUser()" class="mb-4 p-4 border rounded">
       <div class="mb-3">
-        <label for="nom" class="form-label">Nom:</label>
+        <label for="nom" class="form-label">Titre:</label>
         <input id="nom" v-model="newUser.nom" required class="form-control" />
       </div>
       <div class="mb-3">
-        <label for="prenom" class="form-label">Prénom:</label>
+        <label for="prenom" class="form-label">Desciption:</label>
         <input id="prenom" v-model="newUser.prenom" required class="form-control" />
       </div>
       <div class="mb-3">
-        <label for="pseudo" class="form-label">Pseudo:</label>
+        <label for="pseudo" class="form-label">Auteur:</label>
         <input id="pseudo" v-model="newUser.pseudo" required class="form-control" />
       </div>
       <button type="submit" class="btn btn-primary me-2">{{ isEditing ? 'Modifier' : 'Ajouter' }}</button>
@@ -76,9 +76,9 @@ const resetForm = () => {
       <thead class="table-dark">
         <tr>
           <th>Id</th>
-          <th>Nom</th>
-          <th>Prénom</th>
-          <th>Pseudo</th>
+          <th>Titre</th>
+          <th>Desciption</th>
+          <th>Auteur</th>
           <th>Actions</th>
         </tr>
       </thead>
